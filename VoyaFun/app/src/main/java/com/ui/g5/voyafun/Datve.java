@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +29,7 @@ public class Datve extends AppCompatActivity {
     Button btnDatve;
     Dialog dialogConfirm;
     TextView tvAlert;
+    ImageView trangchu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,13 @@ public class Datve extends AppCompatActivity {
         setContentView(R.layout.activity_datve);
         // anh xa
         Anhxa();
+
+        gioithieu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Gioithieu();
+            }
+        });
 
         trochoi.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,22 +92,21 @@ public class Datve extends AppCompatActivity {
     }
 
     private void Anhxa() {
-        trangchu    = (TextView)findViewById(R.id.txtTrangchu);
+        trangchu    = (ImageView) findViewById(R.id.home);
         lehoi       = (TextView)findViewById(R.id.txtLehoi);
         trochoi     = (TextView)findViewById(R.id.txtTrochoi);
         thamquan    = (TextView)findViewById(R.id.txtThamquan);
-        edtNgaythamquan = (EditText)this.findViewById(R.id.edtNgaythamquan);
-        btnDatve = (Button)this.findViewById(R.id.btnDatve);
-        edtslNguoilon = (EditText)this.findViewById(R.id.edtslNguoilon);
-        edtslTreem = (EditText)this.findViewById(R.id.edtslTreem);
-
+        gioithieu   = (TextView) findViewById(R.id.txtGioithieu);
     }
 
     public void Trangchu() {
         Intent myHome = new Intent(this, MainActivity.class);
         startActivity(myHome);
     }
-
+    public void Gioithieu() {
+        Intent intent = new Intent(this, Gioithieu.class);
+        startActivity(intent);
+    }
     public void Trochoi() {
         Intent game = new Intent(this, trochoi.class);
         startActivity(game);

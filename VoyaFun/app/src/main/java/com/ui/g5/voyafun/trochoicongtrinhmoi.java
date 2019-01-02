@@ -85,8 +85,8 @@ public class trochoicongtrinhmoi extends Activity{
 
     private void Khoitaodanhsachtrochoi() {
         arrTrochoi    = new ArrayList<>();
-        arrTrochoi.add(new Information(1,R.drawable.tlst,"Tàu Lượn Siêu Tốc Mini"));
-        arrTrochoi.add(new Information(2,R.drawable.svdh,"Xe Vượt Địa Hình"));
+        arrTrochoi.add(new Information(1,R.drawable.btd,"Biển Tiên Đồng - Ngọc nữ"));
+
     }
 
     public void Trangchu() {

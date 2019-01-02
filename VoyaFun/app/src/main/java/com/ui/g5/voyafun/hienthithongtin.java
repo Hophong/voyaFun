@@ -1,7 +1,10 @@
 package com.ui.g5.voyafun;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -16,8 +19,8 @@ import android.widget.Toast;
 
 public class hienthithongtin extends AppCompatActivity {
 
-    TextView gioithieu, trochoi,lehoi, thamquan;
-    ImageView trangchu;
+    TextView gioithieu, lehoi, trochoi, thamquan, tinnhan;
+    ImageView trangchu, dienthoai, yeuthich;
     WebView webView;
     ProgressBar bar;
 
@@ -36,6 +39,7 @@ public class hienthithongtin extends AppCompatActivity {
         int Id = bundle.getInt("ID");
         String key = bundle.getString("Key");
 
+        // hiện thông tin
         HienThi(key, Id);
 
         Anhxa();
@@ -75,8 +79,66 @@ public class hienthithongtin extends AppCompatActivity {
             }
         });
 
+        dienthoai.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(hienthithongtin.this,"Gọi điện", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        dienthoai.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ShowDialog();
+            }
+
+            private void ShowDialog() {
+                AlertDialog.Builder builder = new AlertDialog.Builder(hienthithongtin.this);
+                builder.setTitle("Suoitien.com");
+                builder.setMessage("Bạn có muốn liên hệ tổng đài viên không?");
+                builder.setCancelable(false);
+                builder.setNegativeButton("Đồng ý", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        String posted_by = "0355729988";
+
+                        String uri = "tel:" + posted_by.trim();
+                        Intent intent = new Intent(Intent.ACTION_DIAL);
+                        intent.setData(Uri.parse(uri));
+
+                        startActivity(intent);
+                    }
+                });
+                builder.setPositiveButton("Hủy", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                        dialogInterface.dismiss();
+                    }
+                });
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+            }
+        });
+
+        tinnhan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tinnhan();
+            }
+
+            public void Tinnhan() {
+                Intent myBooking = new Intent(hienthithongtin.this, tinnhan.class);
+                startActivity(myBooking);
+            }
+        });
+
+
+
+
     }
 
+    // hiển thị thông tin
     public void HienThi(String key, int id) {
         if(key.equals("TQ") == true) {
             if(id == 1) {
@@ -147,7 +209,9 @@ public class hienthithongtin extends AppCompatActivity {
         trochoi     = (TextView)findViewById(R.id.txtTrochoi);
         lehoi     = (TextView)findViewById(R.id.txtLehoi);
         thamquan    = (TextView)findViewById(R.id.txtThamquan);
-
+        tinnhan     =(TextView)findViewById(R.id.txtTinnhan);
+        dienthoai   =findViewById(R.id.imgDienthoai);
+        yeuthich    = (ImageView) findViewById(R.id.imgYeuthich);
     }
 
     public void Gioithieu() {
