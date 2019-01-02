@@ -24,7 +24,7 @@ import java.util.Calendar;
 
 public class Datve extends AppCompatActivity {
 
-    TextView trangchu, lehoi, trochoi, thamquan;
+    TextView lehoi, trochoi, thamquan,gioithieu;
     EditText edtNgaythamquan,edtslNguoilon,edtslTreem;
     Button btnDatve;
     Dialog dialogConfirm;
@@ -97,6 +97,10 @@ public class Datve extends AppCompatActivity {
         trochoi     = (TextView)findViewById(R.id.txtTrochoi);
         thamquan    = (TextView)findViewById(R.id.txtThamquan);
         gioithieu   = (TextView) findViewById(R.id.txtGioithieu);
+        edtNgaythamquan = (EditText)this.findViewById(R.id.edtNgaythamquan);
+        btnDatve = (Button)this.findViewById(R.id.btnDatve);
+        edtslNguoilon = (EditText)this.findViewById(R.id.edtslNguoilon);
+        edtslTreem = (EditText)this.findViewById(R.id.edtslTreem);
     }
 
     public void Trangchu() {
