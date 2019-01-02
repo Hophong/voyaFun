@@ -26,7 +26,10 @@
         <activity android:name=".trochoikhamphaphieuluu" />
         <activity android:name=".trochoicongtrinhmoi" />
         <activity android:name=".hienthithongtin" />
-        <activity android:name=".Gioithieu"></activity>
+        <activity android:name=".Gioithieu" />
+        <activity android:name=".SigninActivity" />
+        <activity android:name=".MaincreenActivity" />
+        <activity android:name=".SignupActivity"></activity>
     </application>
 
 </manifest>
