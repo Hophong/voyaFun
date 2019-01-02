@@ -2,6 +2,7 @@ package com.ui.g5.voyafun;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -17,6 +19,8 @@ public class MaincreenActivity extends AppCompatActivity {
     Button datve;
     WebView webView;
     ProgressBar bar;
+    ImageView hambuger;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,13 +69,14 @@ public class MaincreenActivity extends AppCompatActivity {
     }
 
     private void Anhxa() {
-        gioithieu   = (TextView)findViewById(R.id.txtGioithieu);
-        lehoi       = (TextView)findViewById(R.id.txtLehoi);
-        trochoi     = (TextView)findViewById(R.id.txtTrochoi);
-        thamquan    = (TextView)findViewById(R.id.txtThamquan);
-        datve       = (Button)findViewById(R.id.btnDatve);
-        webView     = (WebView) findViewById(R.id.webViewHienThi);
-        bar         =(ProgressBar) findViewById(R.id.progressBar2);
+        gioithieu = (TextView) findViewById(R.id.txtGioithieu);
+        lehoi = (TextView) findViewById(R.id.txtLehoi);
+        trochoi = (TextView) findViewById(R.id.txtTrochoi);
+        thamquan = (TextView) findViewById(R.id.txtThamquan);
+        datve = (Button) findViewById(R.id.btnDatve);
+        webView = (WebView) findViewById(R.id.webViewHienThi);
+        bar = (ProgressBar) findViewById(R.id.progressBar2);
+        hambuger = (ImageView) findViewById(R.id.hambuger);
     }
 
     public void DatveOnline() {
@@ -120,7 +125,7 @@ public class MaincreenActivity extends AppCompatActivity {
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if((keyCode==KeyEvent.KEYCODE_BACK) && webView.canGoBack()){
+        if ((keyCode == KeyEvent.KEYCODE_BACK) && webView.canGoBack()) {
             webView.goBack();
             return true;
         }

@@ -71,10 +71,10 @@ public class SignupActivity extends AppCompatActivity {
                 }
                 else {
                     Insert(url_insertdata);
-                    finish();
+                    Intent intent=new Intent(SignupActivity.this,SigninActivity.class);
                     //finish();
                     //Intent intent2=new Intent(SignupActivity.this,MaincreenActivity.class);
-                    //startActivity(intent2);
+                    startActivity(intent);
                 }
             }
         });

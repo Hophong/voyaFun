@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">VoyaFun</string>
+    <string name="import">import</string>
+    <string name="gallery">gallery</string>
+    <string name="slideshow">slideshow</string>
+    <string name="tools">tools</string>
+    <string name="import">import</string>
 </resources>

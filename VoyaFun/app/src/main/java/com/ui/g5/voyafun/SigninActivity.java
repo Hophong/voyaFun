@@ -39,6 +39,7 @@ public class SigninActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
+        ReadJson(url_getdata);
         anhxa();
         btnSignin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,8 +49,6 @@ public class SigninActivity extends AppCompatActivity {
                 String email="";
                 int i=0;
                 int check=0;
-                ReadJson(url_getdata);
-                ReadJson(url_getdata);
                 int size=arrayUser.size();
                 for(i=0;i<size;i++)
                 {
@@ -65,12 +64,12 @@ public class SigninActivity extends AppCompatActivity {
                 else
                 {
                     Intent intent1=new Intent(SigninActivity.this,MaincreenActivity.class);
-                    intent1.putExtra("username",user);
-                    intent1.putExtra("email",email);
+                    //intent1.putExtra("username",user);
+                    //intent1.putExtra("email",email);
                     edtUsername.setText("");
                     edtPassword.setText("");
-                    //startActivity(intent1);
-                    finish();
+                    startActivity(intent1);
+                    //finish();
                 }
             }
         });
@@ -95,7 +94,7 @@ public class SigninActivity extends AppCompatActivity {
     }
     private void anhxa()
     {
-        arrayUser       = new ArrayList<>();
+        //arrayUser       = new ArrayList<>();
         btnSignin       =   (Button) findViewById(R.id.btnSignin);
         edtUsername     =   (EditText) findViewById(R.id.edtUsername);
         edtPassword     =   (EditText) findViewById(R.id.edtPassword);
