@@ -92,7 +92,9 @@ public class lehoi extends Activity {
         arrLehoi.add(new Information(2,R.drawable.qtpn,"08/03/2018 – Suối Tiên Ưu Đãi Đặc Biệt Nhân Ngày Quốc Tế Phụ Nữ"));
         arrLehoi.add(new Information(3,R.drawable.gthv,"Giỗ Tổ Hùng Vương Tại Suối Tiên: NƠI HỘI TỤ NGÀN NĂM VĂN HIẾN"));
         arrLehoi.add(new Information(4,R.drawable.xuandd,"Xuân Đinh Dậu: Vui Tết Suối Tiên - Chào Xuân Đón Phúc"));
-
+        arrLehoi.add(new Information(5,R.drawable.ltn,"Du Xuân Suối Tiên - Vui lễ tình nhân"));
+        arrLehoi.add(new Information(6,R.drawable.dcv,"Lễ kỷ niệm 1050 năm thành lập nhà nước Đại Cồ Việt"));
+        arrLehoi.add(new Information(7,R.drawable.psa,"Phóng sự ảnh: Khám phá thiên đường mùa Xuân tại Suối Tiên"));
     }
 
     public void Gioithieu() {

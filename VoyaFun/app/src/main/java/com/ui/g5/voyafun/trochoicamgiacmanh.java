@@ -87,6 +87,11 @@ public class trochoicamgiacmanh extends Activity{
         arrTrochoi    = new ArrayList<>();
         arrTrochoi.add(new Information(1,R.drawable.tlst,"Tàu Lượn Siêu Tốc Mini"));
         arrTrochoi.add(new Information(2,R.drawable.svdh,"Xe Vượt Địa Hình"));
+        arrTrochoi.add(new Information(3,R.drawable.tlht,"Tứ Linh hội tụ"));
+        arrTrochoi.add(new Information(4,R.drawable.ddmh,"Đu dây mạo hiểm"));
+        arrTrochoi.add(new Information(5,R.drawable.db,"Đĩa bay hành tinh lạ"));
+        arrTrochoi.add(new Information(6,R.drawable.vxvt,"Vòng xoay vũ trụ"));
+        arrTrochoi.add(new Information(7,R.drawable.tlst2,"Tàu lượn siêu tốc"));
     }
 
     public void Trangchu() {

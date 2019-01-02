@@ -5,11 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Datve extends AppCompatActivity {
 
-    TextView trangchu, lehoi, trochoi, thamquan;
+    TextView gioithieu, lehoi, trochoi, thamquan;
+    ImageView trangchu;
 
 
     @Override
@@ -18,6 +20,13 @@ public class Datve extends AppCompatActivity {
         setContentView(R.layout.activity_datve);
         // anh xa
         Anhxa();
+
+        gioithieu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Gioithieu();
+            }
+        });
 
         trochoi.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,20 +55,27 @@ public class Datve extends AppCompatActivity {
                 Thamquan();
             }
         });
+
+
+
     }
 
     private void Anhxa() {
-        trangchu    = (TextView)findViewById(R.id.txtTrangchu);
+        trangchu    = (ImageView) findViewById(R.id.home);
         lehoi       = (TextView)findViewById(R.id.txtLehoi);
         trochoi     = (TextView)findViewById(R.id.txtTrochoi);
         thamquan    = (TextView)findViewById(R.id.txtThamquan);
+        gioithieu   = (TextView) findViewById(R.id.txtGioithieu);
     }
 
     public void Trangchu() {
         Intent myHome = new Intent(this, MainActivity.class);
         startActivity(myHome);
     }
-
+    public void Gioithieu() {
+        Intent intent = new Intent(this, Gioithieu.class);
+        startActivity(intent);
+    }
     public void Trochoi() {
         Intent game = new Intent(this, trochoi.class);
         startActivity(game);

@@ -93,6 +93,11 @@ public class Thamquan extends AppCompatActivity {
         arrThamquan = new ArrayList<>();
         arrThamquan.add(new Information(1, R.drawable.tg, "Tượng đài Thánh Gióng"));
         arrThamquan.add(new Information(2, R.drawable.hbt, "Tượng Đài Hai Bà Trưng"));
+        arrThamquan.add(new Information(3, R.drawable.thd, "Tượng Đài Trần Hưng Đạo"));
+        arrThamquan.add(new Information(4, R.drawable.pbqa, "Đền Thờ Phật Bà Quan Âm"));
+        arrThamquan.add(new Information(5, R.drawable.cun, "Cây Ước nguyện"));
+        arrThamquan.add(new Information(6, R.drawable.tttn, "Tượng Phật Thiên Thủ Thiên Nhãn"));
+        arrThamquan.add(new Information(7, R.drawable.lhtb, "Long Hoa Thiên Bảo"));
     }
 
     public void Trangchu() {

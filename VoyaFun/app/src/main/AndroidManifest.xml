@@ -26,7 +26,8 @@
         <activity android:name=".trochoikhamphaphieuluu" />
         <activity android:name=".trochoicongtrinhmoi" />
         <activity android:name=".hienthithongtin" />
-        <activity android:name=".Gioithieu"></activity>
+        <activity android:name=".Gioithieu" />
+        <activity android:name=".tinnhan"></activity>
     </application>
 
 </manifest>
