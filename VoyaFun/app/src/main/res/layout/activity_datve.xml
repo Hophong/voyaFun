@@ -49,7 +49,7 @@
             />
 
         <TextView
-            android:id="@+id/txtTrangchu"
+            android:id="@+id/txtGioithieu"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:text="Giới thiệu"
@@ -199,10 +199,10 @@
                 android:id="@+id/edtDienthoai"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:textSize="18sp"
                 android:layout_marginTop="3dp"
                 android:hint="+84 "
-                />
+                android:inputType="numberDecimal"
+                android:textSize="18sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -213,11 +213,11 @@
                 android:layout_marginTop="5dp"/>
 
             <EditText
+                android:id="@+id/edtNgaythamquan"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:textSize="18sp"
                 android:layout_marginTop="3dp"
-                />
+                android:textSize="18sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -231,10 +231,10 @@
                 android:id="@+id/edtslNguoilon"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:textSize="18sp"
                 android:layout_marginTop="3dp"
                 android:hint="0"
-                />
+                android:inputType="numberDecimal"
+                android:textSize="18sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -248,10 +248,10 @@
                 android:id="@+id/edtslTreem"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:textSize="18sp"
                 android:layout_marginTop="3dp"
                 android:hint="0"
-                />
+                android:inputType="numberDecimal"
+                android:textSize="18sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -273,16 +273,17 @@
                 android:hint="0"/>
 
             <Button
+                android:id="@+id/btnDatve"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="Đặt vé"
-                android:textSize="20sp"
-                android:fontFamily="serif"
-                android:textStyle="bold"
-                android:textColor="#fffefe"
-                android:background="#d26a02"
                 android:layout_gravity="center"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp"
+                android:background="#d26a02"
+                android:fontFamily="serif"
+                android:text="Đặt vé"
+                android:textColor="#fffefe"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 

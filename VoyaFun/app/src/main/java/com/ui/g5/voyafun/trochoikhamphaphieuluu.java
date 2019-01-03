@@ -87,6 +87,10 @@ public class trochoikhamphaphieuluu extends Activity{
         arrTrochoi    = new ArrayList<>();
         arrTrochoi.add(new Information(1,R.drawable.pht,"Đại Cung Phụng Hoàng Tiên"));
         arrTrochoi.add(new Information(2,R.drawable.dclctn,"Đại Cung Lạc Cảnh Tiên Ngư"));
+        arrTrochoi.add(new Information(3,R.drawable.dxtt,"Đua xe thần tốc"));
+        arrTrochoi.add(new Information(4,R.drawable.cxtg,"Cối xây thần gió"));
+        arrTrochoi.add(new Information(5,R.drawable.tc,"Thủy cung"));
+        arrTrochoi.add(new Information(6,R.drawable.clt,"Cổ loa thành"));
     }
 
     public void Trangchu() {

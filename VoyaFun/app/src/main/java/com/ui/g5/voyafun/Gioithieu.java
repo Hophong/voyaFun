@@ -1,7 +1,10 @@
 package com.ui.g5.voyafun;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -16,8 +19,8 @@ import android.widget.Toast;
 
 public class Gioithieu extends AppCompatActivity {
 
-    TextView lehoi, trochoi, thamquan;
-    ImageView trangchu;
+    TextView lehoi, trochoi, thamquan, tinnhan;
+    ImageView trangchu, dienthoai;
     Button datve;
     WebView webView;
     ProgressBar bar;
@@ -68,6 +71,53 @@ public class Gioithieu extends AppCompatActivity {
             }
         });
 
+        dienthoai.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ShowDialog();
+            }
+
+            private void ShowDialog() {
+                AlertDialog.Builder builder = new AlertDialog.Builder(Gioithieu.this);
+                builder.setTitle("Suoitien.com");
+                builder.setMessage("Bạn có muốn liên hệ tổng đài viên không?");
+                builder.setCancelable(false);
+                builder.setNegativeButton("Đồng ý", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        String posted_by = "0355729988";
+
+                        String uri = "tel:" + posted_by.trim();
+                        Intent intent = new Intent(Intent.ACTION_DIAL);
+                        intent.setData(Uri.parse(uri));
+
+                        startActivity(intent);
+                    }
+                });
+                builder.setPositiveButton("Hủy", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                        dialogInterface.dismiss();
+                    }
+                });
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+            }
+        });
+
+        tinnhan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tinnhan();
+            }
+
+            public void Tinnhan() {
+                Intent myBooking = new Intent(Gioithieu.this, tinnhan.class);
+                startActivity(myBooking);
+            }
+        });
+
     }
 
     private void Anhxa() {
@@ -78,6 +128,8 @@ public class Gioithieu extends AppCompatActivity {
         datve       = (Button)findViewById(R.id.btnDatve);
         webView     = (WebView) findViewById(R.id.webViewHienThi);
         bar         =(ProgressBar) findViewById(R.id.progressBar2);
+        tinnhan     =(TextView)findViewById(R.id.txtTinnhan);
+        dienthoai   =(ImageView)findViewById(R.id.imgDienthoai);
     }
 
     public void DatveOnline() {

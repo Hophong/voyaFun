@@ -27,9 +27,13 @@
         <activity android:name=".trochoicongtrinhmoi" />
         <activity android:name=".hienthithongtin" />
         <activity android:name=".Gioithieu" />
+<<<<<<< HEAD
         <activity android:name=".SigninActivity" />
         <activity android:name=".MaincreenActivity" />
         <activity android:name=".SignupActivity"></activity>
+=======
+        <activity android:name=".tinnhan"></activity>
+>>>>>>> dd1985c719cd782ee9d6b4589a2168aafce01be8
     </application>
 
 </manifest>
